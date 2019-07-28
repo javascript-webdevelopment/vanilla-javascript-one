@@ -72,7 +72,13 @@ alert(myName) // result: a popup message in the browser would appear displaying 
 
 ## Window Object
 
+The `window object` is the object that represents an open window in the browser. We can use this object to interact with our browser window and get any data from it that we need or any make any changes that we need. It's import to note the the `window object` is the global object that our code will live in, inside a broswer environment.
 
+We can access the object by referencing `window`.
+
+```javascript
+console.log(window); // result: logs the window object
+```
 
 ## DOM
 
