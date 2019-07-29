@@ -259,3 +259,21 @@ function submit(){
     alert('Post has been submitted!');
 }
 ```
+
+### Add Event Listener
+
+We can use `.addEventListener()` to add a specific event to an element and a provide it an event handler function to fire when the event occurs for the element.
+
+```html
+<button id="myButton">Submit</button>
+```
+
+```javascript
+const myButton = document.getElementById('myButton');
+
+myButton.addEventListener('click', function(){
+    console.log('button was clicked')
+})
+```
+
+Notice how we first capture the element then add the event listener. The first argument to the event listener function is the event, this will always be a string. Then we have the event handler function that will execute when the event happens.
