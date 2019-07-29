@@ -208,6 +208,8 @@ myList.classList.remove('show');
 myList.classList.toggle('show');
 ```
 
+We can also use `.toggle()` and this will determine if the class already exists, if it does remove it, if not then add it
+
 `style` - this is the object we can use to adjust a style property on an element
 
 ```html
@@ -224,7 +226,16 @@ const myList = document.getElementById('myList');
 myList.style.background = 'red';
 ```
 
-We can also use `.toggle()` and this will determine if the class already exists, if it does remove it, if not then add it
+`value` - on input elements we can use the value property to access what has been typed into the input box
+
+```html
+<input type="text" id="myInput">
+```
+
+```javascript
+const myInput = document.getElementById('myInput');
+console.log(myInput.value)
+```
 
 ### Events and Event Handlers
 

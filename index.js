@@ -16,7 +16,9 @@ function btnClick(){
 const headerOne = document.getElementById('headerOne');
 console.dir(headerOne)
 
-
+// inpout value example
+const myInput = document.getElementById('myInput');
+console.log(myInput.value)
 
 // property examples
 const myList = document.getElementById('myList');
