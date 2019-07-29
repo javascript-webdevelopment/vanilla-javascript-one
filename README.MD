@@ -118,6 +118,7 @@ const myBtn = document.getElementById(`btn`);
 `.getElementByTagNames` - This method will return a collection of the element's child elements with a specifide tagname as a NodeList object. The NodeList object is a collection of nodes. These nodes can be accessed by index numbers starting at 0. Just like an array.
 
 > tip: you can use the `.length` property to determine how many child nodes there are
+
 >tip: the '*' parameter value will return all child nodes
 
 ```html
