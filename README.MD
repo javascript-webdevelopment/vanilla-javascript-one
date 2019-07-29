@@ -136,6 +136,41 @@ const numberOfLiTags = list.getElementsByTagName('li')
 console.log(numberOfLiTags); //result: an HTMLcollection containing the `li` tags
 ```
 
+`.querySelector` - this returns the first element in our document that matches the specified selector. Here we can use selecters to find an element just like CSS.
+
+```html
+<ul id="myList" class="list">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+</ul>
+```
+
+```javascript
+// element
+const myList = document.querySelector('ul');
+
+// id
+const myList = document.querySelector('#myList');
+
+// class
+const myList = document.querySelector('.myList');
+```
+
+`.querySelectorAll` - this works just like querySelector, however this will return a NodeList with all of the matching elements with the specified selector.
+
+```html
+<ul id="myList" class="list">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+</ul>
+```
+
+```javascript
+const listItems = document.querySelector('li');
+```
+
 ### Node Properties
 
 Each node has a set of properties that we can interact with to perform certain actions.
