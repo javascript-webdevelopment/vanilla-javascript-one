@@ -131,10 +131,100 @@ const myBtn = document.getElementById(`btn`);
 ```javascript
 const list = document.getElementById('myList');
 
-const numberOfLiTags = list.getElementsByTagName('li').length;
+const numberOfLiTags = list.getElementsByTagName('li')
 
-console.log(numberOfLiTags); //result: 3
+console.log(numberOfLiTags); //result: an HTMLcollection containing the `li` tags
 ```
+
+### Node Properties
+
+Each node has a set of properties that we can interact with to perform certain actions.
+
+`innerText` - This will return all of the text content inside of an element and avoid returning any html elements.
+
+```html
+<ul id="myList">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+</ul>
+```
+
+```javascript
+const myList = document.getElementById('myList');
+
+console.log(myList.innerText);
+```
+
+`innerHTML` - The innerHTML property sets or returns the HTML content (inner HTML) of an element.
+
+```html
+<ul id="myList">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+</ul>
+```
+
+```javascript
+const myList = document.getElementById('myList');
+
+console.log(myList.innerHTML);
+```
+
+`className` - this will get or set the value for the elements class
+
+```html
+<div class="divOne" id="divOne">
+</div>
+```
+
+```javascript
+const divOne = document.getElementById('divOne');
+
+console.log(divOne.className);
+```
+
+`classList` - this is the object that we can use to remove or add classes to an element
+
+```html
+<ul class="list" id="myList">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+</ul>
+```
+
+```javascript
+const myList = document.getElementById('myList');
+
+// Add A Class
+myList.classList.add('show');
+
+// Remove A Class
+myList.classList.remove('show');
+
+// Toggle A Class
+myList.classList.toggle('show');
+```
+
+`style` - this is the object we can use to adjust a style property on an element
+
+```html
+<ul class="list" id="myList">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+</ul>
+```
+
+```javascript
+const myList = document.getElementById('myList');
+
+myList.style.background = 'red';
+```
+
+We can also use `.toggle()` and this will determine if the class already exists, if it does remove it, if not then add it
 
 ### Events and Event Handlers
 
