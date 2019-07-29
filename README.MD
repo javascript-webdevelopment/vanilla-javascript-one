@@ -60,6 +60,7 @@ const myName = 'Tayte';
 
 console.log(myName) // result: 'Tayte'
 ```
+
 ### Alert
 
 `alert()` - This is the function we can use in web browsers to display a popup message or an alert to the user
@@ -68,6 +69,15 @@ console.log(myName) // result: 'Tayte'
 const myName = 'Tayte'
 
 alert(myName) // result: a popup message in the browser would appear displaying the string of 'Tayte'
+```
+
+
+### Console Dir
+
+`console.dir()` - this will display an interactive list of the properties from the specified object.
+
+```javascript
+console.dir(window); // result: a list of window props and values
 ```
 
 ## Window Object
@@ -87,3 +97,64 @@ DOM is the acronym we use for `Document Object Model`. The DOM is an object repr
 It's easy to think of the DOM as a tree. Each element that exists on the DOM is known as a `node`. We can target these nodes with Javascript to create functionality within our page.
 
 ![DOM TREE](images/domtree.png)
+
+## Interacting With The DOM
+
+We can interact with the DOM by accessing the `document` object. The document object represents the DOM tree and it is used as an entry point to interacting the the DOM. The DOM tree includes elements such as `<body>`, `<input>`, `button`, and many others. Using the `document` object, we can add event listeners and capture node values.
+
+### Accessing Elements
+
+There are many built in methods from the `document` object that we can use to access specific elements from the DOM.
+
+`.getElementById` - This method will return an element that has the a matching id to the one we pass in as an argument.
+
+```html
+<button id="myBtn">My Button</button>
+```
+```javascript
+const myBtn = document.getElementById(`btn`);
+```
+
+`.getElementByTagNames` - This method will return a collection of the element's child elements with a specifide tagname as a NodeList object. The NodeList object is a collection of nodes. These nodes can be accessed by index numbers starting at 0. Just like an array.
+
+> tip: you can use the `.length` property to determine how many child nodes there are
+>tip: the '*' parameter value will return all child nodes
+
+```html
+<ul id="myList">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+</ul>
+```
+
+```javascript
+const list = document.getElementById('myList');
+
+const numberOfLiTags = list.getElementsByTagName('li').length;
+
+console.log(numberOfLiTags); //result: 3
+```
+
+### Events and Event Handlers
+
+Events are 'things' that happen in our html file. We can add event handlers to our html elements to start some logic when a specific event happens.
+
+Syntax:
+```html
+<tagname event="js to happen">content</tagname>
+```
+
+We first have the event attribute, this could such events as `onclick`, `onmouseover`, `onmouseleave`, etc. After we will put our javascript logic inside of quotes.
+
+
+Better Example:
+```html
+<button onclick="submit()">Submit</button>
+```
+
+```javascript
+function submit(){
+    alert('Post has been submitted!');
+}
+```
